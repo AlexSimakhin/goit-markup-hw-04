@@ -9,9 +9,6 @@
   padding: 0;
   border: 0;
   outline: 0;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-              color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -91,8 +88,8 @@ span {
 
 /* Header */
 .header {
-  display: inline;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .header__container {
   display: flex;
@@ -129,11 +126,15 @@ span {
   padding: 24px 0;
   font-weight: 500;
   color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav__link.active {
+  color: #404bbf;
 }
 .nav__link.active::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   display: block;
@@ -211,6 +212,7 @@ span {
   background-color: #4d5ae5;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero__button:hover {
@@ -231,7 +233,7 @@ span {
   width: calc((100% - 72px) / 4);
 }
 .benefits__icon {
-  padding: 24px 0;
+  height: 112px;
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
@@ -280,7 +282,7 @@ span {
 }
 .team__image {}
 .team__profile {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .team__profile-name {
   margin-bottom: 8px;
@@ -295,13 +297,16 @@ span {
   margin-bottom: 8px;
   text-align: center;
 }
-.team__profile-social {}
 .team__profile-social-list {
   display: flex;
   justify-content: center;
   gap: 24px;
 }
-.team__profile-social-item {}
+.team__profile-social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .team__profile-social-link {
   display: flex;
   justify-content: center;
@@ -316,6 +321,10 @@ span {
 }
 .team__profile-social-link:focus {
   background-color: #404bbf;
+}
+.team__profile-social-icon {
+  fill: #f4f4fd;
+  color: #f4f4fd;
 }
 
 .portfolio {
@@ -332,6 +341,10 @@ span {
 }
 .portfolio__item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio__item:hover {
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio__thumb {
   position: relative;
@@ -346,12 +359,10 @@ span {
   transform: translateY(100%);
   background: #4d5ae5;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #f4f4fd;
 }
 .portfolio__item:hover .portfolio__overlay {
   transform: translateY(0%);
-}
-.portfolio__overlay-text {
-  color: #f4f4fd;
 }
 .portfolio__case {
   padding: 32px 16px;
@@ -375,9 +386,11 @@ span {
 }
 .footer__container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
 }
-.footer__studio {}
+.footer__studio {
+  margin-right: 120px;
+}
 .footer__logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -399,6 +412,7 @@ span {
 .footer__social {}
 .footer__social-title {
   margin-bottom: 16px;
+  font-weight: 500;
   color: #ffffff;
 }
 .footer__social-list {
@@ -414,10 +428,15 @@ span {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__social-link:hover {
   background-color: #31D0AA;
 }
 .footer__social-link:focus {
   background-color: #31D0AA;
+}
+.footer__social-icon {
+  fill: #f4f4fd;
+  color: #f4f4fd;
 }
