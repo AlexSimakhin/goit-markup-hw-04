@@ -163,6 +163,7 @@ span {
 .contacts__item {}
 .contacts__link {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__link:hover {
   color: #404bbf;
@@ -315,6 +316,7 @@ span {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team__profile-social-link:hover {
   background-color: #404bbf;
